@@ -1,0 +1,35 @@
+﻿<Window x:Class="Chat.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Chat"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="1" Margin="0,100">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="0" Text="Логин" VerticalAlignment="Center"/>
+            <TextBox Grid.Row="1" Name="NameUser" Margin="0,5" VerticalContentAlignment="Center" MaxLength="15"/>
+
+            <TextBlock Grid.Row="2" Text="Пароль" VerticalAlignment="Center"/>
+            <PasswordBox Grid.Row="3" Name="PasswordUser" Margin="0,5" VerticalContentAlignment="Center" MaxLength="15"/>
+
+            <Button Grid.Row="4" Name="Reg" Content="Регистрация" Margin="0,5" Click="Reg_Click"/>
+            <Button Grid.Row="5" Name="Auth" Content="Авторизация" Margin="0,5" Click="Auth_Click"/>
+        </Grid>
+    </Grid>
+</Window>
